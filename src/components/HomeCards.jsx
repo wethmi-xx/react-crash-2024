@@ -30,6 +30,18 @@ const HomeCards = () => {
               Add Job
             </Link>
           </Card>
+          <Card bg='bg-green-100'>
+            <h2 className='text-2xl font-bold'>For Engineers</h2>
+            <p className='mt-2 mb-4'>
+              Why wait? browse and start the career today
+            </p>
+            <Link
+              to='/jobs'
+              className='inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700'
+            >
+              Browse Jobs
+            </Link>
+          </Card>
         </div>
       </div>
     </section>

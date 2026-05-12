@@ -11,6 +11,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import JobPage, { jobLoader } from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
+import PrivatePage from './pages/PrivatePage';
 
 const App = () => {
   // Add New Job
@@ -61,6 +62,7 @@ const App = () => {
           element={<JobPage deleteJob={deleteJob} />}
           loader={jobLoader}
         />
+        <Route path='/private' element={<PrivatePage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Route>
     )

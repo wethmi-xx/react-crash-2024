@@ -1,5 +1,5 @@
 const Hero = ({
-  title = 'Become a React Dev',
+  title = 'Developers',
   subtitle = 'Find the React job that fits your skill set',
 }) => {
   return (

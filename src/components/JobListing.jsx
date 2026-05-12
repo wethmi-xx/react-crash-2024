@@ -4,11 +4,17 @@ import { Link } from 'react-router-dom';
 
 const JobListing = ({ job }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
+  const [showLocation, setShowLocation] = useState(false);
 
   let description = job.description;
+  let location = job.location;
 
   if (!showFullDescription) {
     description = description.substring(0, 90) + '...';
+  }
+
+  if (!showLocation) {
+    location = "Location Hidden";
   }
 
   return (
@@ -35,8 +41,11 @@ const JobListing = ({ job }) => {
         <div className='flex flex-col lg:flex-row justify-between mb-4'>
           <div className='text-orange-700 mb-3'>
             <FaMapMarker className='inline text-lg mb-1 mr-1' />
-            {job.location}
+            {location}
           </div>
+          <button onClick = {() => setShowLocation((prevState) => !prevState)} className='text-gray-500 hover:text-gray-700 mb-3'>
+            {showLocation ? 'Hide Location' : 'Show Location'}
+          </button>
           <Link
             to={`/jobs/${job.id}`}
             className='h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm'
