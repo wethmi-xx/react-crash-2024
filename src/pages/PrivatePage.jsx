@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import {useState, useEffect} from 'react';
+import {toast} from 'react-toastify';
 
 
 const PrivatePage = () => {
@@ -22,6 +23,8 @@ const PrivatePage = () => {
                 <li key = {index}>{name}</li>
             ))}
         </ul>
+        <button onClick={() => {toast.success("Toast success")}}>Show toast</button>
+        <button onClick={() => {toast.error("Toast error")}}>Show toast error</button>
         </>
     )
 };
